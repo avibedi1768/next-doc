@@ -95,7 +95,7 @@ export default function Chatbot() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const server_url = process.env.NEXT_PUBLIC_SERVER_URL;
-  console.log("url", server_url);
+  // console.log("url", server_url);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -132,7 +132,7 @@ export default function Chatbot() {
     setInputMessage("");
     setLoading(true);
 
-    console.log("messages", messages);
+    // console.log("messages", messages);
 
     try {
       const response = await fetch(`${server_url}/chat`, {
