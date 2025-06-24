@@ -6,17 +6,17 @@ import { FileText, Phone } from "lucide-react";
 
 const slides = [
   {
-    img: "https://img.freepik.com/free-photo/team-young-specialist-doctors-standing-corridor-hospital_1303-21199.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",
+    img: "https://img.freepik.com/free-photo/close-up-doctor-with-stethoscope_23-2149191362.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_hybrid&w=740",
     heading: "Delivering Specialized Life Care Planning",
     text: "We provide personalized medical diagnostics and projections tailored to injury cases with precision and integrity.",
   },
   {
-    img: "https://img.freepik.com/free-photo/happy-female-doctor-giving-high-fie-little-boy-who-came-with-father-hospital_637285-492.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",
+    img: "https://img.freepik.com/free-photo/close-up-doctor-with-stethoscope_23-2149191355.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",
     heading: "Ethical, Compliant & Technology-Driven",
     text: "Our processes are rooted in regulatory compliance, supported by advanced healthcare technology and expert teams.",
   },
   {
-    img: "https://img.freepik.com/free-photo/close-up-doctor-with-stethoscope_23-2149191355.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",
+    img: "https://img.freepik.com/free-photo/group-medics-hospital_23-2147763792.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_hybrid&w=740",
     heading: "Empowering Professionals, Supporting Clients",
     text: "We foster a collaborative environment for our skilled professionals to deliver consistent, reliable, and ethical care.",
   },
@@ -61,10 +61,18 @@ export default function Hero() {
               >
                 {slide.heading}
               </h1>
-              <p data-aos="fade-down" className="text-lg sm:text-xl mb-8">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="200"
+                className="text-lg sm:text-xl mb-8"
+              >
                 {slide.text}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+              >
                 <Button
                   size="lg"
                   onClick={scrollToContact}

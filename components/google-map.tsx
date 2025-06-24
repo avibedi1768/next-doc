@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 export default function GoogleMap() {
   return (
@@ -14,5 +14,5 @@ export default function GoogleMap() {
         title="Quality Guard MSO Location - Las Vegas, Nevada"
       />
     </div>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -10,44 +10,50 @@ const testimonials = [
     role: "Personal Injury Attorney",
     content:
       "Quality Guard MSO's life care planning reports are incredibly detailed and professional. They've been instrumental in securing fair settlements for my clients.",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Dr. Michael Chen",
     role: "Rehabilitation Specialist",
     content:
       "Their AI-powered diagnostics have revolutionized how we approach complex medical cases. The accuracy and speed are unmatched in the industry.",
-    avatar: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Jennifer Martinez",
     role: "Case Manager",
     content:
       "The workflow automation has streamlined our entire process. What used to take weeks now takes days, without compromising quality.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Robert Thompson",
     role: "Insurance Adjuster",
     content:
       "Quality Guard MSO provides the most comprehensive and reliable medical summaries I've worked with. Their attention to detail is exceptional.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Dr. Lisa Park",
     role: "Medical Director",
     content:
       "Their regulatory compliance standards exceed industry requirements. I trust them completely with sensitive medical information.",
-    avatar: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "David Wilson",
     role: "Legal Consultant",
     content:
       "The expert witness testimony provided by Quality Guard MSO has been crucial in complex litigation cases. Highly professional team.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
   },
-]
+];
 
 function Marquee({
   className,
@@ -58,13 +64,13 @@ function Marquee({
   repeat = 4,
   ...props
 }: {
-  className?: string
-  reverse?: boolean
-  pauseOnHover?: boolean
-  children?: React.ReactNode
-  vertical?: boolean
-  repeat?: number
-  [key: string]: any
+  className?: string;
+  reverse?: boolean;
+  pauseOnHover?: boolean;
+  children?: React.ReactNode;
+  vertical?: boolean;
+  repeat?: number;
+  [key: string]: any;
 }) {
   return (
     <div
@@ -75,7 +81,7 @@ function Marquee({
           "flex-row": !vertical,
           "flex-col": vertical,
         },
-        className,
+        className
       )}
     >
       {Array(repeat)
@@ -94,7 +100,7 @@ function Marquee({
           </div>
         ))}
     </div>
-  )
+  );
 }
 
 export default function Testimonials() {
@@ -102,9 +108,12 @@ export default function Testimonials() {
     <section id="testimonials" className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            What Our Clients Say
+          </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Trusted by attorneys, medical professionals, and healthcare organizations across the nation.
+            Trusted by attorneys, medical professionals, and healthcare
+            organizations across the nation.
           </p>
         </div>
 
@@ -122,11 +131,15 @@ export default function Testimonials() {
                     className="w-12 h-12 rounded-full object-cover mr-4"
                   />
                   <div>
-                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                    <h4 className="font-semibold text-gray-900">
+                      {testimonial.name}
+                    </h4>
                     <p className="text-sm text-blue-600">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed italic">"{testimonial.content}"</p>
+                <p className="text-gray-600 text-sm leading-relaxed italic">
+                  "{testimonial.content}"
+                </p>
                 <div className="flex mt-4">
                   {[...Array(5)].map((_, i) => (
                     <svg
@@ -145,5 +158,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }

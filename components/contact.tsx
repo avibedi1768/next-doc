@@ -21,36 +21,57 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const redirectToWhatsApp = () => {
-    if (!firstName || !lastName || !email || !phone || !message) {
+  //   const redirectToWhatsApp = () => {
+  //     if (!firstName || !lastName || !email || !phone || !message) {
+  //       alert("Please fill in all the required fields.");
+  //       return;
+  //     }
+
+  //     const fullMessage = `
+  // Name: ${firstName} ${lastName}
+  // Email: ${email}
+  // Phone: ${phone}
+  // Service Needed: ${service}
+  // Message: ${message}
+  //     `.trim();
+
+  //     const phoneNumber = "918146004250"; // Replace with your number
+  //     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+  //       fullMessage
+  //     )}`;
+  //     window.open(whatsappURL, "_blank");
+  //   };
+
+  const handleContactSubmit = async () => {
+    const isValidEmail = (email: string) =>
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    const isValidPhone = (phone: string) => /^[\d\s()+-]{7,20}$/.test(phone); // allows digits, spaces, +, (), -, and length between 7–20
+
+    if (
+      !firstName.trim() ||
+      !lastName.trim() ||
+      !email.trim() ||
+      !phone.trim() ||
+      !message.trim()
+    ) {
       alert("Please fill in all the required fields.");
       return;
     }
 
-    const fullMessage = `
-Name: ${firstName} ${lastName}
-Email: ${email}
-Phone: ${phone}
-Service Needed: ${service}
-Message: ${message}
-    `.trim();
+    if (!isValidEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-    const phoneNumber = "918146004250"; // Replace with your number
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      fullMessage
-    )}`;
-    window.open(whatsappURL, "_blank");
-  };
-
-  const handleContactSubmit = async () => {
-    if (!firstName || !lastName || !email || !phone || !message) {
-      alert("Please fill in all the required fields.");
+    if (!isValidPhone(phone)) {
+      alert("Please enter a valid phone number.");
       return;
     }
 
     setLoading(true); // Disable button
 
-    try {
+    /* try {
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/api/contact`,
         {
@@ -90,7 +111,7 @@ Message: ${message}
       alert("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
-    }
+    } */
   };
 
   return (

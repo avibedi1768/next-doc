@@ -21,14 +21,13 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
           <div data-aos="fade-up" className="animate-fade-in-up">
             <div className="relative h-[400px] w-full">
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg transform -rotate-3 opacity-20"></div>
-  <img
-    src="https://img.freepik.com/free-photo/close-up-doctor-holding-red-heart_23-2149191363.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740"
-    alt="Medical professionals collaborating on life care planning and patient assessment at Quality Guard MSO"
-    className="relative h-full w-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-  />
-</div>
-
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg transform -rotate-3 opacity-20"></div>
+              <img
+                src="https://img.freepik.com/free-photo/close-up-doctor-holding-red-heart_23-2149191363.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740"
+                alt="Medical professionals collaborating on life care planning and patient assessment at Quality Guard MSO"
+                className="relative h-full w-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           </div>
           <div data-aos="fade-up" className="animate-slide-in-right">
             <h3

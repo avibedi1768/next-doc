@@ -178,7 +178,7 @@ export default function Chatbot() {
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") sendMessage();
+    if (e.key === "Enter" && !loading) sendMessage();
   };
 
   return (
@@ -249,12 +249,14 @@ export default function Chatbot() {
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Type your message..."
+                  disabled={loading}
                   className="flex-1 px-2 py-1 sm:px-3 sm:py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs sm:text-sm"
                 />
                 <Button
                   onClick={sendMessage}
                   size="sm"
                   className="gradient-bg hover:bg-blue-700 text-white px-2 sm:px-3"
+                  disabled={loading}
                 >
                   <Send className="w-3 h-3 sm:w-4 sm:h-4" />
                 </Button>
