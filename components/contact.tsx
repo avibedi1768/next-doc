@@ -19,6 +19,7 @@ export default function Contact() {
   const [phone, setPhone] = useState("");
   const [service, setService] = useState("Life Care Planning");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const redirectToWhatsApp = () => {
     if (!firstName || !lastName || !email || !phone || !message) {
@@ -39,6 +40,57 @@ Message: ${message}
       fullMessage
     )}`;
     window.open(whatsappURL, "_blank");
+  };
+
+  const handleContactSubmit = async () => {
+    if (!firstName || !lastName || !email || !phone || !message) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+
+    setLoading(true); // Disable button
+
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            email,
+            phone,
+            service,
+            message,
+            owner: "arshpreet2517@gmail.com",
+          }),
+        }
+      );
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      alert("Your message has been sent successfully!");
+
+      // Optionally clear form fields here
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhone("");
+      setService("Life Care Planning");
+      setMessage("");
+    } catch (err) {
+      console.error("Error submitting contact form:", err);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -237,10 +289,11 @@ Message: ${message}
                 </div>
 
                 <Button
-                  onClick={redirectToWhatsApp}
-                  className="w-full gradient-bg hover:bg-blue-700 font-bold text-white transform hover:scale-105 transition-all"
+                  onClick={handleContactSubmit}
+                  disabled={loading}
+                  className="w-full gradient-bg hover:bg-blue-700 font-bold text-white transform hover:scale-105 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {loading ? "Processing..." : "Send Message"}
                 </Button>
               </CardContent>
             </Card>

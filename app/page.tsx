@@ -87,7 +87,7 @@ export default function HomePage() {
                 className="block hover:opacity-80 transition-opacity"
               >
                 <img
-                  src="/logo2.png"
+                  src="/logo3.png"
                   alt="Quality Guard SMO - Lifecare Planning"
                   className="h-8 sm:h-10 w-auto"
                 />
