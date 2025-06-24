@@ -20,7 +20,7 @@ export default function HomePage() {
   useEffect(() => {
     const handleScroll = () => {
       // const sections = ["home", "about", "services", "testimonials", "commitments", "contact"]
-      const sections = ["home", "about", "services", "commitments", "contact"];
+      const sections = ["home", "about", "services", "core-values", "contact"];
       const scrollPosition = window.scrollY + 100; // Offset for header height
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -71,9 +71,13 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm border-b z-50">
+      <header
+        data-aos="fade-down"
+        className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm border-b z-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
+            {/* Logo and Icon */}
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 sm:w-10 sm:h-10 gradient-bg rounded-lg flex items-center justify-center">
                 <Stethoscope className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
@@ -83,54 +87,48 @@ export default function HomePage() {
                 className="block hover:opacity-80 transition-opacity"
               >
                 <img
-                  src="/images/logo.png"
+                  src="/logo1.png"
                   alt="Quality Guard SMO - Lifecare Planning"
                   className="h-8 sm:h-10 w-auto"
                 />
               </button>
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex space-x-8">
-              <button
-                onClick={() => scrollToSection("home")}
-                className={getNavLinkClass("home")}
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className={getNavLinkClass("about")}
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className={getNavLinkClass("services")}
-              >
-                Services
-              </button>
-              {/* <button
-                onClick={() => scrollToSection("testimonials")}
-                className={getNavLinkClass("testimonials")}
-              >
-                Testimonials
-              </button> */}
-              <button
-                onClick={() => scrollToSection("commitments")}
-                className={getNavLinkClass("commitments")}
-              >
-                Commitments
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className={getNavLinkClass("contact")}
-              >
-                Contact
-              </button>
-            </nav>
+            {/* Navigation links and button (combined) */}
+            <div className="flex items-center space-x-8">
+              <nav className="hidden lg:flex space-x-8">
+                <button
+                  onClick={() => scrollToSection("home")}
+                  className={getNavLinkClass("home")}
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className={getNavLinkClass("about")}
+                >
+                  About
+                </button>
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className={getNavLinkClass("services")}
+                >
+                  Services
+                </button>
+                <button
+                  onClick={() => scrollToSection("core-values")}
+                  className={getNavLinkClass("core-values")}
+                >
+                  Core Values
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className={getNavLinkClass("contact")}
+                >
+                  Contact
+                </button>
+              </nav>
 
-            <div className="flex items-center space-x-4">
               <Button
                 onClick={scrollToContact}
                 className="hidden sm:block gradient-bg hover:bg-blue-700 text-white"
@@ -176,17 +174,11 @@ export default function HomePage() {
                 >
                   Services
                 </button>
-                {/* <button
-                  onClick={() => scrollToSection("testimonials")}
-                  className={`text-left ${getNavLinkClass("testimonials")}`}
-                >
-                  Testimonials
-                </button> */}
                 <button
-                  onClick={() => scrollToSection("commitments")}
-                  className={`text-left ${getNavLinkClass("commitments")}`}
+                  onClick={() => scrollToSection("core-values")}
+                  className={`text-left ${getNavLinkClass("core-values")}`}
                 >
-                  Commitments
+                  Core Values
                 </button>
                 <button
                   onClick={() => scrollToSection("contact")}

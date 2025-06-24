@@ -27,13 +27,14 @@ export default function Contact() {
     }
 
     const fullMessage = `
-    Name: ${firstName} ${lastName}
-    Email: ${email}
-    Phone: ${phone}
-    Service Needed: ${service}
-    Message: ${message}`.trim();
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone}
+Service Needed: ${service}
+Message: ${message}
+    `.trim();
 
-    const phoneNumber = "910000000000"; // change to your number
+    const phoneNumber = "918146004250"; // Replace with your number
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       fullMessage
     )}`;
@@ -47,14 +48,13 @@ export default function Contact() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-          <div className="animate-fade-in-up">
+          <div data-aos="fade-up">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Get in Touch
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              Ready to discuss your life care planning needs? Our team of
-              medical experts is here to provide the specialized support your
-              case requires.
+              Whether you have questions about our services or are ready to
+              discuss a case, our dedicated team is here to support you.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -119,14 +119,14 @@ export default function Contact() {
             <GoogleMap />
           </div>
 
-          <div className="animate-slide-in-right">
+          <div data-aos="slide-up">
             <Card className="bg-white shadow-xl">
               <CardHeader>
                 <CardTitle className="text-xl sm:text-2xl">
                   Request Consultation
                 </CardTitle>
                 <CardDescription className="text-sm sm:text-base">
-                  Fill out the form below and we'll get back to you within 24
+                  Fill out the form below and our team will respond within 24
                   hours.
                 </CardDescription>
               </CardHeader>
@@ -211,8 +211,10 @@ export default function Contact() {
                   >
                     <option>Life Care Planning</option>
                     <option>Medical Summary & Projections</option>
-                    <option>AI-Powered Diagnostics</option>
-                    <option>Legal Support Services</option>
+                    <option>Specialized Medical Diagnostics</option>
+                    <option>Advanced Healthcare Solutions</option>
+                    <option>Regulatory Compliance & Ethics</option>
+                    <option>Employee Well-being</option>
                     <option>Other</option>
                   </select>
                 </div>
@@ -230,7 +232,7 @@ export default function Contact() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-                    placeholder="Please describe your case and specific needs..."
+                    placeholder="Please describe your case or inquiry..."
                   ></textarea>
                 </div>
 

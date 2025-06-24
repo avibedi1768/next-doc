@@ -101,20 +101,20 @@ export default function Footer() {
                   Our Services
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <button
                   onClick={() => scrollToSection("testimonials")}
                   className="text-gray-400 hover:text-white transition-colors text-sm block text-left"
                 >
                   Testimonials
                 </button>
-              </li>
+              </li> */}
               <li>
                 <button
-                  onClick={() => scrollToSection("commitments")}
+                  onClick={() => scrollToSection("core-values")}
                   className="text-gray-400 hover:text-white transition-colors text-sm block text-left"
                 >
-                  Our Commitments
+                  Core Values
                 </button>
               </li>
               <li>
@@ -155,16 +155,16 @@ export default function Footer() {
                 Medical Summary & Projections
               </li>
               <li className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
-                AI-Powered Diagnostics
+                Specialized Medical Diagnostics
               </li>
               <li className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
-                Legal Support Services
+                Advanced Healthcare Solutions
               </li>
               <li className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
-                Workflow Automation
+                Regulatory Compliance & Ethics
               </li>
               <li className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
-                Regulatory Compliance
+                Employee Well-being
               </li>
             </ul>
           </div>
@@ -342,7 +342,9 @@ export default function Footer() {
             <div className="flex items-center space-x-2 text-sm text-gray-500">
               <span>Powered by</span>
               <span className="text-blue-400 font-semibold">
-                <a href="https://datakernels.in" target="_blank">Data Kernels</a>
+                <a href="https://datakernels.in" target="_blank">
+                  Data Kernels
+                </a>
               </span>
             </div>
           </div>

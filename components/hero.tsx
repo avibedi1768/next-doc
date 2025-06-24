@@ -1,80 +1,107 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { FileText, Phone, Award } from "lucide-react"
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { FileText, Phone } from "lucide-react";
+
+const slides = [
+  {
+    img: "https://img.freepik.com/free-photo/team-young-specialist-doctors-standing-corridor-hospital_1303-21199.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",
+    heading: "Delivering Specialized Life Care Planning",
+    text: "We provide personalized medical diagnostics and projections tailored to injury cases with precision and integrity.",
+  },
+  {
+    img: "https://img.freepik.com/free-photo/happy-female-doctor-giving-high-fie-little-boy-who-came-with-father-hospital_637285-492.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",
+    heading: "Ethical, Compliant & Technology-Driven",
+    text: "Our processes are rooted in regulatory compliance, supported by advanced healthcare technology and expert teams.",
+  },
+  {
+    img: "https://img.freepik.com/free-photo/close-up-doctor-with-stethoscope_23-2149191355.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",
+    heading: "Empowering Professionals, Supporting Clients",
+    text: "We foster a collaborative environment for our skilled professionals to deliver consistent, reliable, and ethical care.",
+  },
+];
 
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+
   const scrollToContact = () => {
-    const element = document.getElementById("contact")
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section
-      id="home"
-      className="relative bg-gradient-to-br from-blue-50 via-white to-gray-50 py-16 sm:py-20 pt-24 sm:pt-32"
-    >
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="animate-fade-in-up">
-            <Badge className="bg-blue-100 text-blue-800 mb-4 text-xs sm:text-sm">
-              Established 2023 • Las Vegas, Nevada
-            </Badge>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Expert Life Care Planning for
-              <span className="gradient-text"> Personal Injury Cases</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              Quality Guard MSO delivers specialized medical diagnostics, comprehensive life care planning, and advanced
-              healthcare solutions with unwavering commitment to ethical practice and excellence.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                onClick={scrollToContact}
-                className="gradient-bg hover:bg-blue-700 text-white transform hover:scale-105 transition-all"
+    <section id="home" className="relative h-screen w-full overflow-hidden">
+      {slides.map((slide, i) => (
+        <div
+          key={i}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            i === index ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
+          style={{
+            backgroundImage: `url(${slide.img})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
+
+          <div className="relative z-20 h-full flex items-center justify-center text-center px-4">
+            <div className="max-w-2xl text-white">
+              <h1
+                data-aos="fade-down"
+                className="text-3xl sm:text-5xl font-bold mb-6"
               >
-                <FileText className="w-5 h-5 mr-2" />
-                Book Appointment
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transform hover:scale-105 transition-all"
-                asChild
-              >
-                <a href="tel:+18000000000">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Us
-                </a>
-              </Button>
-            </div>
-          </div>
-          <div className="relative animate-slide-in-right">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg transform rotate-3 opacity-20"></div>
-            <img
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500&q=80"
-              alt="Medical professionals reviewing life care plans and legal documents"
-              className="relative rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
-            />
-            <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-3 sm:p-4 rounded-lg shadow-lg animate-pulse-slow">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900 text-sm sm:text-base">50+ Professionals</p>
-                  <p className="text-xs sm:text-sm text-gray-600">Expert Medical Team</p>
-                </div>
+                {slide.heading}
+              </h1>
+              <p data-aos="fade-down" className="text-lg sm:text-xl mb-8">
+                {slide.text}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  size="lg"
+                  onClick={scrollToContact}
+                  className="gradient-bg hover:bg-blue-700 text-white transform hover:scale-105 transition-all"
+                >
+                  <FileText className="w-5 h-5 mr-2" />
+                  Book Appointment
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50 transform hover:scale-105 transition-all"
+                  asChild
+                >
+                  <a href="tel:+18000000000">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Us
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
         </div>
+      ))}
+
+      {/* Slide Dots */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`w-3 h-3 rounded-full ${
+              index === i ? "bg-white" : "bg-white/50"
+            } transition-all`}
+          />
+        ))}
       </div>
     </section>
-  )
+  );
 }
