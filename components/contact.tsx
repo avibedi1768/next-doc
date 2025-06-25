@@ -71,7 +71,7 @@ export default function Contact() {
 
     setLoading(true); // Disable button
 
-    /* try {
+    try {
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/api/contact`,
         {
@@ -111,7 +111,7 @@ export default function Contact() {
       alert("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
-    } */
+    }
   };
 
   return (

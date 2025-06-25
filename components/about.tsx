@@ -11,7 +11,7 @@ export default function About() {
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Quality Guard MSO is a distinguished organization in the life care
-            planning and healthcare sectors, committed to delivering specialized
+            planning and healthcare sector, committed to delivering specialized
             diagnostic services and expert medical summaries tailored to
             personal injury and long-term care needs.
           </p>
