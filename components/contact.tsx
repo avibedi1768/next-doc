@@ -192,7 +192,7 @@ export default function Contact() {
             <GoogleMap />
           </div>
 
-          <div data-aos="slide-up">
+          <div data-aos="fade-up">
             <Card className="bg-white shadow-xl">
               <CardHeader>
                 <CardTitle className="text-xl sm:text-2xl">
