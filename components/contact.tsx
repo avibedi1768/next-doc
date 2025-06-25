@@ -178,12 +178,12 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-900">Website</h4>
                   <a
-                    href="https://www.xyz.com"
+                    href="https://www.theqgucmso.com"
                     className="text-gray-600 hover:text-blue-600 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    www.xyz.com
+                    www.theqgucmso.com
                   </a>
                 </div>
               </div>

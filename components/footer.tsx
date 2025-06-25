@@ -37,7 +37,8 @@ export default function Footer() {
               cases. Delivering specialized healthcare solutions with integrity
               and excellence since 2023.
             </p>
-            <div className="flex space-x-4">
+
+            {/* <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -70,7 +71,7 @@ export default function Footer() {
               >
                 <Linkedin className="w-4 h-4" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -209,10 +210,10 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Globe className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <a
-                  href="https://www.abc.com"
+                  href="https://www.theqgucmso.com"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
-                  www.abc.com
+                  www.theqgucmso.com
                 </a>
               </div>
 

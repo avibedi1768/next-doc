@@ -5,31 +5,31 @@ export default function CoreValues() {
   const values = [
     {
       icon: Users,
-      title: "Employee Growth & Diversity",
+      title: "People-Centered Culture",
       description:
-        "We foster an inclusive, collaborative environment where professionals grow and thrive together.",
-      imageKeyword: "diverse medical team collaboration",
+        "We prioritize the growth, well-being, and inclusivity of every team member, empowering a supportive and diverse environment.",
+      imageKeyword: "diverse happy healthcare team working together",
     },
     {
       icon: Award,
-      title: "High-Quality Service",
+      title: "Excellence in Care",
       description:
-        "Dedicated to delivering specialized healthcare solutions that are reliable, efficient, and patient-centered.",
-      imageKeyword: "healthcare excellence team patient care",
+        "We are driven to deliver high-quality, specialized healthcare services that are reliable, innovative, and client-focused.",
+      imageKeyword: "healthcare professionals providing top quality service",
     },
     {
       icon: ShieldCheck,
       title: "Integrity & Compliance",
       description:
-        "We strictly adhere to ethical practices and regulatory standards across all medical and diagnostic services.",
-      imageKeyword: "medical ethics compliance healthcare law",
+        "We operate with ethical integrity and strict adherence to regulatory guidelines across all areas of healthcare and diagnostics.",
+      imageKeyword: "medical ethics law compliance documentation",
     },
     {
       icon: Cpu,
-      title: "Innovation & Improvement",
+      title: "Innovation & Continuous Improvement",
       description:
-        "We continually enhance services through cutting-edge technology and ongoing training of our staff.",
-      imageKeyword: "healthcare technology innovation training",
+        "We embrace advanced technologies and training to evolve with the future of healthcare and provide forward-thinking solutions.",
+      imageKeyword: "modern medical technology and learning environment",
     },
   ];
 

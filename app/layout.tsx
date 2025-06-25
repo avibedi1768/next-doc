@@ -5,6 +5,9 @@ import AOSProvider from "./AOSProvider";
 export const metadata: Metadata = {
   title: "Quality Guard MSO",
   description: "Quality Guard MSO website for Life Care Planning",
+  icons: {
+    icon: "/favicon.png",
+  },
   // generator: 'v0.dev',
 };
 
