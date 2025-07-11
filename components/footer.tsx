@@ -187,7 +187,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <a
                   href="tel:+910000000000"
@@ -195,9 +195,9 @@ export default function Footer() {
                 >
                   +91 00000 00000
                 </a>
-              </div>
+              </div> */}
 
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <a
                   href="mailto:user@example.com"
@@ -205,7 +205,7 @@ export default function Footer() {
                 >
                   user@example.com
                 </a>
-              </div>
+              </div> */}
 
               <div className="flex items-center space-x-3">
                 <Globe className="w-5 h-5 text-blue-400 flex-shrink-0" />

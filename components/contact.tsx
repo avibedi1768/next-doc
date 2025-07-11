@@ -141,6 +141,7 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* 
               <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
                   <Phone className="w-6 h-6 text-white" />
@@ -155,8 +156,9 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
+               */}
 
-              <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              {/* <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
@@ -169,7 +171,7 @@ export default function Contact() {
                     user@example.com
                   </a>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
