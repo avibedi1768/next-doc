@@ -34,19 +34,23 @@ export default function About() {
               data-aos="fade-down"
               className="text-xl sm:text-2xl font-bold text-gray-900 mb-6"
             >
-              Excellence Through Innovation and Integrity
+              Excellence Through Innovation, Integrity & AI Support
             </h3>
+            
             <p className="text-gray-600 mb-6 leading-relaxed">
               Quality Guard MSO combines clinical expertise with innovative
-              solutions to deliver accurate, ethical, and compliant healthcare
-              planning. Our services are built on regulatory excellence,
-              technology, and compassion.
+              solutions — including AI-powered tools — to deliver accurate,
+              ethical, and compliant healthcare planning. Our services are built
+              on regulatory excellence, modern technology, and compassion.
             </p>
+
             <p className="text-gray-600 mb-8 leading-relaxed">
               We foster a culture of inclusivity and growth—empowering our
-              professionals to thrive while delivering impactful solutions to
-              the legal, medical, and patient communities we serve.
+              professionals with intelligent automation and decision support
+              systems to deliver impactful solutions to the legal, medical, and
+              patient communities we serve.
             </p>
+
             <div
               data-aos="fade-up"
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"

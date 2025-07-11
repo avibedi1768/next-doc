@@ -34,11 +34,11 @@ export default function Services() {
       icon: Stethoscope,
       title: "Medical Summary & Projections",
       description:
-        "Detailed summaries and care projections for patients, supporting case evaluations and healthcare delivery.",
+        "AI-assisted summaries and care projections to support case evaluations and streamline patient care.",
       features: [
-        "Medical record consolidation",
-        "Treatment timelines",
-        "Care forecasting",
+        "Smart medical record consolidation",
+        "Predictive treatment timelines",
+        "AI-powered care forecasting",
       ],
       image:
         "https://img.freepik.com/free-photo/medium-shot-doctor-filling-document-high-angle_23-2149355027.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",
@@ -47,10 +47,10 @@ export default function Services() {
       icon: HeartPulse,
       title: "Specialized Medical Diagnostics",
       description:
-        "Advanced diagnostic evaluations customized to meet specific medical and legal case requirements.",
+        "Advanced diagnostic evaluations enhanced by intelligent algorithms to support case-specific decisions.",
       features: [
         "Comprehensive health assessments",
-        "Specialist-led diagnostics",
+        "AI-augmented diagnostics",
         "Report-ready insights",
       ],
       image:
@@ -60,11 +60,11 @@ export default function Services() {
       icon: Settings,
       title: "Advanced Healthcare Solutions",
       description:
-        "Innovative tools and methodologies for enhanced healthcare service delivery and planning.",
+        "Cutting-edge AI tools and tech-driven methodologies to elevate healthcare planning and outcomes.",
       features: [
-        "Tech-enabled care strategies",
-        "Efficiency-focused solutions",
-        "Interdisciplinary support",
+        "AI-based care strategies",
+        "Efficiency through automation",
+        "Smart interdisciplinary support",
       ],
       image:
         "https://img.freepik.com/free-photo/specialist-working-with-medical-application_1134-638.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",

@@ -11,6 +11,11 @@ const slides = [
     text: "We provide personalized medical diagnostics and projections tailored to injury cases with precision and integrity.",
   },
   {
+    img: "/hero1.jpg",
+    heading: "AI-Powered Life Care Planning",
+    text: "Combining expert medical insight with machine learning to deliver accurate, efficient, and personalized life care plans.",
+  },
+  {
     img: "https://img.freepik.com/free-photo/close-up-doctor-with-stethoscope_23-2149191355.jpg?ga=GA1.1.1245176083.1750754511&semt=ais_items_boosted&w=740",
     heading: "Ethical, Compliant & Technology-Driven",
     text: "Our processes are rooted in regulatory compliance, supported by advanced healthcare technology and expert teams.",
