@@ -86,7 +86,7 @@ export default function Contact() {
             phone,
             service,
             message,
-            owner: "arshpreet2517@gmail.com",
+            owner: "piyush@qgucmso.com",
           }),
         }
       );
