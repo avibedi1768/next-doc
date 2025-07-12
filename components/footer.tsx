@@ -182,30 +182,31 @@ export default function Footer() {
                     Las Vegas, NV 89109
                     <br />
                     United States */}
-                    Las Vegas, Nevada, USA
+                    10780 Santa Monica Blvd Suite 210, West Los Angeles, CA
+                    90025, USA
                   </p>
                 </div>
               </div>
 
-              {/* <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <a
-                  href="tel:+910000000000"
+                  href="tel:+14847645271"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
-                  +91 00000 00000
+                  +1 484-764-5271
                 </a>
-              </div> */}
+              </div>
 
-              {/* <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <a
-                  href="mailto:user@example.com"
+                  href="mailto:admin@qgucmso.com"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
-                  user@example.com
+                  admin@qgucmso.com
                 </a>
-              </div> */}
+              </div>
 
               <div className="flex items-center space-x-3">
                 <Globe className="w-5 h-5 text-blue-400 flex-shrink-0" />
@@ -217,7 +218,7 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className="pt-4 border-t border-gray-800">
+              {/* <div className="pt-4 border-t border-gray-800">
                 <p className="text-gray-500 text-xs mb-2">Business Hours:</p>
                 <p className="text-gray-400 text-sm">
                   Monday - Friday: 8:00 AM - 6:00 PM
@@ -226,7 +227,7 @@ export default function Footer() {
                   <br />
                   Sunday: Closed
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

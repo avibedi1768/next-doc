@@ -137,11 +137,13 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Headquarters</h4>
-                  <p className="text-gray-600">Las Vegas, Nevada, USA</p>
+                  <p className="text-gray-600">
+                    10780 Santa Monica Blvd Suite 210, <br /> West Los Angeles,
+                    CA 90025, USA
+                  </p>
                 </div>
               </div>
 
-              {/* 
               <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
                   <Phone className="w-6 h-6 text-white" />
@@ -149,29 +151,28 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-900">Phone</h4>
                   <a
-                    href="tel:+910000000000"
+                    href="tel:+14847645271"
                     className="text-gray-600 hover:text-blue-600 transition-colors"
                   >
-                    +91 00000 00000
+                    +1 484-764-5271
                   </a>
                 </div>
               </div>
-               */}
 
-              {/* <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Email</h4>
                   <a
-                    href="mailto:user@example.com"
+                    href="mailto:admin@qgucmso.com"
                     className="text-gray-600 hover:text-blue-600 transition-colors"
                   >
-                    user@example.com
+                    admin@qgucmso.com
                   </a>
                 </div>
-              </div> */}
+              </div>
 
               <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">

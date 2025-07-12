@@ -20,7 +20,7 @@ export default function HomePage() {
   useEffect(() => {
     const handleScroll = () => {
       // const sections = ["home", "about", "services", "testimonials", "commitments", "contact"]
-      const sections = ["home", "about", "services", "core-values", "contact"];
+      const sections = ["home", "about", "services", "core-values"];
       const scrollPosition = window.scrollY + 100; // Offset for header height
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -121,12 +121,12 @@ export default function HomePage() {
                 >
                   Core Values
                 </button>
-                <button
+                {/* <button
                   onClick={() => scrollToSection("contact")}
                   className={getNavLinkClass("contact")}
                 >
                   Contact
-                </button>
+                </button> */}
               </nav>
 
               <Button
